@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioTech Career AI Pro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <h1>BioTech Career AI Pro 2.0</h1>
+        </div>
+        <nav class="main-nav">
+            <button id="theme-toggle">Toggle Dark Mode</button>
+        </nav>
+    </header>
+
+    <main id="dashboard" class="dashboard-grid">
+
+        <!-- Automation Status Section -->
+        <section class="widget" id="automation-status">
+            <h2>Core Automation Status</h2>
+            <article class="widget-item">
+                <h3>GitHub Actions Workflow</h3>
+                <p>Status: <span id="github-status">Active</span></p>
+                <p>Success Rate: <span id="github-success-rate">99.1%</span></p>
+                <p>Last Run: <span id="github-last-run">2025-09-16 18:00:00</span></p>
+            </article>
+            <article class="widget-item">
+                <h3>n8n Webhook System</h3>
+                <p>Status: <span id="n8n-status">Operational</span></p>
+                <p>Endpoint: <span id="n8n-endpoint">/webhook/balaji-automation</span></p>
+                <p>Data Processed: <span id="n8n-data">1.2GB</span></p>
+            </article>
+            <article class="widget-item">
+                <h3>AI Content Generation</h3>
+                <p>Posts Generated: <span id="ai-posts">284</span></p>
+                <p>Models: <span id="ai-models">GPT-4, Gemini, Claude</span></p>
+            </article>
+        </section>
+
+        <!-- Performance & Analytics Section -->
+        <section class="widget" id="performance-analytics">
+            <h2>Performance & Analytics</h2>
+            <article class="widget-item">
+                <h3>Core Web Vitals</h3>
+                <ul>
+                    <li>LCP: <span id="lcp-value">1.8s</span></li>
+                    <li>INP: <span id="inp-value">145ms</span></li>
+                    <li>CLS: <span id="cls-value">0.05</span></li>
+                </ul>
+            </article>
+            <article class="widget-item">
+                <h3>Career Analytics</h3>
+                <ul>
+                    <li>Profile Views: <span id="profile-views">+23%</span></li>
+                    <li>Job Applications: <span id="job-apps">+31%</span></li>
+                    <li>Content Engagement: <span id="content-engagement">+42%</span></li>
+                </ul>
+            </article>
+            <article class="widget-item">
+                <h3>Time Saved This Week</h3>
+                <p class="time-saved"><span id="time-saved">18.7</span> hours</p>
+            </article>
+        </section>
+
+        <!-- Integrations & Applications Section -->
+        <section class="widget" id="integrations-applications">
+            <h2>Integrations & Applications</h2>
+            <article class="widget-item">
+                <h3>Platform Connections</h3>
+                <ul>
+                    <li>LinkedIn: <span class="status-connected">Connected</span></li>
+                    <li>GitHub: <span class="status-connected">Connected</span></li>
+                    <li>ResearchGate: <span class="status-connected">Connected</span></li>
+                    <li>ORCID: <span class="status-connected">Connected</span></li>
+                </ul>
+            </article>
+            <article class="widget-item">
+                <h3>D-U-N-S Application</h3>
+                <p>University: Parul University</p>
+                <p>Progress: <span id="duns-progress">85%</span></p>
+                <div class="progress-bar-container">
+                    <div id="duns-progress-bar" class="progress-bar" style="width: 85%;"></div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Resource Hub & Networking -->
+        <section class="widget" id="resources-networking">
+            <h2>Resources & Networking</h2>
+            <article class="widget-item">
+                <h3>Resource Hub</h3>
+                <ul>
+                    <li><a href="#">GitHub Actions Guide</a></li>
+                    <li><a href="#">n8n Webhook Docs</a></li>
+                    <li><a href="#">AI Model Configuration</a></li>
+                </ul>
+            </article>
+            <article class="widget-item">
+                <h3>Biotech Associations</h3>
+                <ul>
+                    <li><a href="#" target="_blank">MassBio</a></li>
+                    <li><a href="#" target="_blank">ASCB</a></li>
+                    <li><a href="#" target="_blank">ASGCT</a></li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Interactive Chart placeholder -->
+        <section class="widget" id="chart-container">
+            <h2>Weekly Activity</h2>
+            <canvas id="activity-chart"></canvas>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 BioTech Career AI Pro. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Chart.js for interactive charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

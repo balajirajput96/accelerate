@@ -1,0 +1,280 @@
+/* --- BioTech Career AI Pro --- */
+/* --- Main Stylesheet --- */
+
+/* --- 1. CSS Variables & Basic Setup --- */
+:root {
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Light Mode Palette */
+    --bg-color-light: #f4f7f9;
+    --widget-bg-color-light: #ffffff;
+    --text-color-light: #1a202c;
+    --header-bg-light: #ffffff;
+    --border-color-light: #e2e8f0;
+    --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --accent-blue-light: #3a7bd5;
+    --accent-green-light: #3a9d5d;
+    --connected-status-light: #2c7a7b;
+
+    /* Dark Mode Palette */
+    --bg-color-dark: #1a202c;
+    --widget-bg-color-dark: #2d3748;
+    --text-color-dark: #e2e8f0;
+    --header-bg-dark: #2d3748;
+    --border-color-dark: #4a5568;
+    --shadow-dark: 0 4px 6px rgba(0, 0, 0, 0.2);
+    --accent-blue-dark: #63b3ed;
+    --accent-green-dark: #68d391;
+    --connected-status-dark: #4fd1c5;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+/* --- 2. Main Layout --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--header-bg-light);
+    border-bottom: 1px solid var(--border-color-light);
+    box-shadow: var(--shadow-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+body.dark-mode .main-header {
+    background-color: var(--header-bg-dark);
+    border-bottom: 1px solid var(--border-color-dark);
+}
+
+.main-header .logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--accent-blue-light);
+}
+
+body.dark-mode .main-header .logo h1 {
+    color: var(--accent-blue-dark);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile-first: single column */
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+/* --- 3. Widget Styling --- */
+.widget {
+    background-color: var(--widget-bg-color-light);
+    border: 1px solid var(--border-color-light);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-light);
+    transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+}
+
+.widget:hover {
+    transform: translateY(-5px);
+}
+
+body.dark-mode .widget {
+    background-color: var(--widget-bg-color-dark);
+    border-color: var(--border-color-dark);
+    box-shadow: var(--shadow-dark);
+}
+
+.widget h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    border-bottom: 2px solid var(--accent-green-light);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+body.dark-mode .widget h2 {
+    border-bottom-color: var(--accent-green-dark);
+}
+
+.widget-item {
+    margin-bottom: 1rem;
+}
+
+.widget-item:last-child {
+    margin-bottom: 0;
+}
+
+.widget-item h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    color: var(--accent-blue-light);
+}
+
+body.dark-mode .widget-item h3 {
+    color: var(--accent-blue-dark);
+}
+
+.widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.widget ul li {
+    padding: 0.25rem 0;
+}
+
+/* --- 4. Component Styling --- */
+#theme-toggle {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color-light);
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    cursor: pointer;
+    font-size: 0.9rem;
+    min-height: 44px; /* Touch target size */
+    min-width: 44px; /* Touch target size */
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+body.dark-mode #theme-toggle {
+    background-color: var(--widget-bg-color-dark);
+    border-color: var(--border-color-dark);
+    color: var(--text-color-dark);
+}
+
+#theme-toggle:hover {
+    background-color: #e2e8f0;
+}
+
+body.dark-mode #theme-toggle:hover {
+    background-color: #4a5568;
+}
+
+.time-saved {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent-green-light);
+}
+
+body.dark-mode .time-saved {
+    color: var(--accent-green-dark);
+}
+
+.status-connected {
+    color: var(--connected-status-light);
+    font-weight: bold;
+}
+
+body.dark-mode .status-connected {
+    color: var(--connected-status-dark);
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #e2e8f0;
+    border-radius: 4px;
+    height: 10px;
+    overflow: hidden;
+}
+
+body.dark-mode .progress-bar-container {
+    background-color: #4a5568;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--accent-blue-light);
+    border-radius: 4px;
+    transition: width 0.5s ease-in-out;
+}
+
+body.dark-mode .progress-bar {
+    background-color: var(--accent-blue-dark);
+}
+
+.widget a {
+    color: var(--accent-blue-light);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.widget a:hover {
+    text-decoration: underline;
+}
+
+body.dark-mode .widget a {
+    color: var(--accent-blue-dark);
+}
+
+#chart-container {
+    grid-column: 1 / -1; /* Make chart span full width initially */
+}
+
+
+/* --- 5. Responsive Breakpoints --- */
+
+/* Tablet Portrait (and larger phones) */
+@media (min-width: 481px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+}
+
+/* Tablet Landscape */
+@media (min-width: 769px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #automation-status, #performance-analytics {
+        grid-column: span 1;
+    }
+    #chart-container {
+        grid-column: 1 / -1; /* Span full width */
+    }
+}
+
+/* Desktop */
+@media (min-width: 1201px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* Allow some widgets to span multiple columns */
+    #automation-status {
+        grid-column: span 1;
+    }
+    #performance-analytics {
+        grid-column: span 2;
+    }
+    #integrations-applications {
+        grid-column: span 1;
+    }
+    #chart-container {
+        grid-column: span 2;
+    }
+    #resources-networking {
+        grid-column: span 3;
+    }
+}
